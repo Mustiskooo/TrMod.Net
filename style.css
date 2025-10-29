@@ -1,0 +1,31 @@
+        @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap');
+
+        .downloadtest1{
+            background-color: black;    
+            color: azure;
+            border-style: inset ;
+            border-width: 10px;
+            border-color: green;
+            }
+        .dcyazistilibrowhat{
+            
+            font-family: "BBH Sans Hegarty", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: azure;
+            text-shadow: 2px 2px black;
+        }
+        .sec{
+            border: 1px;
+            border-radius: 8px;
+            color: azure;
+            text-shadow: 2px 2px black;
+        }
+        .baslik{
+            color:beige;
+            text-shadow: 2px 2px black;
+        }
+        body{
+            font-family: "Audiowide", sans-serif;
+            background-color: blueviolet;
+        }

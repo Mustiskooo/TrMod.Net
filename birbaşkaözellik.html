@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-image">
+    <img src="mod1.jpg" alt="BetterSwords">
+    <img src="sword.png" class="sword" alt="Kılıç">
+  </div>
+  <div class="card-content">
+    <h3>BetterSwords</h3>
+    <p>Kılıç modları PvP için optimize edildi</p>
+  </div>
+  <div class="badge">PvP Onay 💪</div>
+  <div class="tooltip">Muffix test etti 😏</div>
+</div>
+
+<style>
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px #06b6d4, 0 0 30px #f97316;
+}
+.card-image {
+  position: relative;
+}
+.sword {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: transform 0.5s ease;
+  pointer-events: none; /* hover’ı engellemesin */
+}
+.card:hover .sword {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+</style>

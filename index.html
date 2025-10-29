@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="indir-removebg-preview.png"/>
+<title>TrMod.Net</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #111827; /* dark bg */
+    color: #f3f4f6;
+  }
+  header {
+    background-color: #1f2937;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px #06b6d430;
+  }
+  header a {
+    color: #06b6d4;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #06b6d4;
+    text-shadow: 0 0 10px #06b6d4;
+  }
+  .hero button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #111827;
+    background-color: #06b6d4;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #06b6d4;
+  }
+  .hero button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px #06b6d4, 0 0 30px #f97316;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .card {
+    background-color: #1f2937;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card img {
+    width: 100%;
+    display: block;
+  }
+  .card-content {
+    padding: 1rem;
+  }
+  .card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 0 20px #06b6d4, 0 0 30px #f97316;
+  }
+  .badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #f97316;
+    color: #111827;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-shadow: none;
+  }
+  .tooltip {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #06b6d4;
+    color: #111827;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .card:hover .tooltip {
+    opacity: 1;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #1f2937;
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div>TrMod.Net <span style="font-size:0.8rem; color:#f97316;">by Muffix & EclipseFP</span></div>
+  <nav>
+    <a href="indexana.html">Home Page</a>
+    <a href="#">Add A Mod</a>
+    <a href="#">About Us</a>
+    <a href="#">🔍 Search</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>En Güvenli Modlar, Elimizden Geçti</h1>
+  <button>See Popular Mods </button>
+</section>
+
+<section class="card-grid">
+  <div class="card">
+    <img src="mod1.jpg" alt="BetterSwords">
+    <div class="card-content">
+      <h3>BetterSwords</h3>
+      <p>A Sword Mod With Ultımate Optimization</p>
+    </div>
+    <div class="badge">Better PvP 💪</div>
+    <div class="tooltip">Muffixx tested😏</div>
+  </div>
+  
+  <div class="card">
+    <img src="mod2.jpg" alt="LagFixPro">
+    <div class="card-content">
+      <h3>LagFixPro</h3>
+      <p>Upgrade Server "Performance"</p>
+    </div>
+    <div class="badge">Eclipse ✅</div>
+    <div class="tooltip">Eclipse Approved 🚀</div>
+  </div>
+
+  <div class="card">
+    <img src="mod3.jpg" alt="TexturePlus">
+    <div class="card-content">
+      <h3>BetterTexture+</h3>
+      <p>Better Items</p>
+    </div>
+    <div class="badge">Visual Mod ✅</div>
+    <div class="tooltip">Muffix & Eclipse's Spesical 😎</div>
+  </div>
+</section>
+
+<footer>
+  © 2025 TrMod.Net | <a href="https://www.google.com">Discord</a> |<a href="https://www.patreon.com"> Patreon </a><br>
+  All mods tested by @ muffix and optimized by @ eclipsefp  💪<br>
+  Mini daily note: "Today, EclipseFP drinked a cup of (lot of cups) coffee ☕, Muffix tested mods and wrote code 💪"
+</footer>
+</body>
+</html>
