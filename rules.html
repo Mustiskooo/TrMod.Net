@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrMod.Net - Mod Yükleme Kuralları</title>
+  <style>
+    body {
+      background: #0a0a0f;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px;
+      transition: background 1s ease, color 1s ease;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+
+    .rule-card {
+      background: #141420;
+      border: 1px solid #00eaff33;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 0 15px #00eaff20;
+      transition: all 0.3s ease;
+    }
+
+    .rule-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #00eaff50;
+    }
+
+    .tr {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .en {
+      color: #b0b0b0;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #00eaff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 🌌 Eclipse Mode: Yıldızlı Gökyüzü */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .eclipse-mode {
+      background: radial-gradient(circle at bottom, #01010a, #000);
+      color: #9fe8ff;
+    }
+
+    /* 🌈 Muffix Mode: RGB Çılgınlığı */
+    @keyframes rgb {
+      0% { background-color: #ff0040; color: #fff; }
+      25% { background-color: #ffbf00; color: #000; }
+      50% { background-color: #00ff80; color: #000; }
+      75% { background-color: #00aaff; color: #fff; }
+      100% { background-color: #a200ff; color: #fff; }
+    }
+
+    .muffix-mode {
+      animation: rgb 8s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <h1>📜 Mod Yükleme Kuralları / Mod Upload Rules</h1>
+  <h2><a id="muffix">Muffix</a> & <a id="eclipse">Eclipse</a> Ekibi</h2>
+
+  <div class="rule-card">
+    <div class="tr">1️⃣ Mod Sahipliği</div>
+    <div class="en">1️⃣ Mod Ownership</div>
+    <p class="tr">Yalnızca kendinize ait modları yükleyebilirsiniz. Başkasının modunu veya içeriğini izinsiz paylaşmak yasaktır.</p>
+    <p class="en">You can only upload mods that belong to you. Uploading someone else’s mod without permission is strictly prohibited.</p>
+  </div>
+
+  <div class="rule-card">
+    <div class="tr">2️⃣ Telif Hakları</div>
+    <div class="en">2️⃣ Copyright</div>
+    <p class="tr">İzin alınmamış veya çalıntı içerikler anında kaldırılır. Gerekirse hesaplar sistemden uzaklaştırılır.</p>
+    <p class="en">Any stolen or unauthorized content will be removed immediately. Accounts may be suspended if necessary.</p>
+  </div>
+
+  <div class="rule-card">
+    <div class="tr">3️⃣ Güvenlik ve Dosya Kontrolü</div>
+    <div class="en">3️⃣ Security & File Check</div>
+    <p class="tr">Gönderilen modlar TrMod.Net ekibi tarafından test edilir. Zararlı dosyalar (ör. .exe, .bat) yasaktır.</p>
+    <p class="en">Uploaded mods are tested by the TrMod.Net team. Malicious files (e.g. .exe, .bat) are not allowed.</p>
+  </div>
+
+  <div class="rule-card">
+    <div class="tr">4️⃣ Açıklama ve Görseller</div>
+    <div class="en">4️⃣ Description & Images</div>
+    <p class="tr">Açıklama net ve sade olmalıdır. Spam veya sahte başlık yasaktır. Uygunsuz görseller kaldırılır.</p>
+    <p class="en">Descriptions must be clear. Spam or fake titles are forbidden. Inappropriate images will be removed.</p>
+  </div>
+
+  <div class="rule-card">
+    <div class="tr">5️⃣ Saygı ve Topluluk</div>
+    <div class="en">5️⃣ Respect & Community</div>
+    <p class="tr">Başkalarının emeğine saygı göster. TrMod.Net samimi bir mod topluluğudur.</p>
+    <p class="en">Respect other creators’ work. TrMod.Net is a friendly community for mod creators.</p>
+  </div>
+
+  <footer>
+    © 2025 TrMod.Net – Muffix & Eclipse Production 🌙  
+  </footer>
+
+  <script>
+    let eclipseClicks = 0;
+    let muffixClicks = 0;
+
+    const eclipse = document.getElementById("eclipse");
+    const muffix = document.getElementById("muffix");
+
+    eclipse.addEventListener("click", () => {
+      eclipseClicks++;
+      if (eclipseClicks === 5) {
+        document.body.classList.add("eclipse-mode");
+        for (let i = 0; i < 100; i++) {
+          const star = document.createElement("div");
+          star.classList.add("star");
+          star.style.top = Math.random() * 100 + "vh";
+          star.style.left = Math.random() * 100 + "vw";
+          star.style.animationDelay = Math.random() * 2 + "s";
+          document.body.appendChild(star);
+        }
+      }
+    });
+
+    muffix.addEventListener("click", () => {
+      muffixClicks++;
+      if (muffixClicks === 3) {
+        document.body.classList.toggle("muffix-mode");
+      }
+    });
+  </script>
+</body>
+</html>
